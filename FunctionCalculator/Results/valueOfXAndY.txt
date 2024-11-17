@@ -1,0 +1,41 @@
+When n = 4 and x = -4: y = -3.33333
+When n = 4 and x = -3: y = -2.5
+When n = 4 and x = -2: y = -1.66667
+When n = 4 and x = -1: y = -0.833333
+When n = 4 and x = 0: y = 0
+When n = 4 and x = 1: y = 11.4167
+When n = 4 and x = 2: y = 6.85
+When n = 4 and x = 3: y = 5
+======================================
+When n = 6 and x = -10: y = -12.8333
+When n = 6 and x = -8: y = -10.2667
+When n = 6 and x = -6: y = -7.7
+When n = 6 and x = -4: y = -5.13333
+When n = 6 and x = -2: y = -2.56667
+======================================
+When n = 3 and x = 1: y = 5.16667
+When n = 3 and x = 4: y = 1.68333
+When n = 3 and x = 7: y = 1.02579
+When n = 3 and x = 10: y = 0.739394
+When n = 3 and x = 13: y = 0.578388
+======================================
+When n = 6 and x = 1: y = 32.8
+When n = 6 and x = 2: y = 20.6143
+When n = 6 and x = 3: y = 15.4607
+When n = 6 and x = 4: y = 12.4782
+When n = 6 and x = 5: y = 10.5
+When n = 6 and x = 6: y = 9.08074
+When n = 6 and x = 7: y = 8.00826
+When n = 6 and x = 8: y = 7.16719
+======================================
+When n = 5 and x = -3: y = -3.25
+When n = 5 and x = -1: y = -1.08333
+When n = 5 and x = 1: y = 20.55
+When n = 5 and x = 3: y = 9.37143
+When n = 5 and x = 5: y = 6.27183
+======================================
+When n = 5 and x = 5: y = 6.27183
+When n = 5 and x = 6: y = 5.39802
+When n = 5 and x = 7: y = 4.74221
+When n = 5 and x = 8: y = 4.23081
+======================================
