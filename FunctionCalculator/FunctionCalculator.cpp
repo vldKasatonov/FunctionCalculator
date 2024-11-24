@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <math.h>
 
 using namespace std;
 
@@ -27,6 +28,10 @@ double calculateY(double x, int n) {
     return y;
 }
 
+double roundCustom(double num) {
+    return round(num * 100000) / 100000;
+}
+
 void checkValidInput() {
     if (cin.fail()) {
         throw "Invalid data has been entered";
@@ -47,7 +52,7 @@ void checkValidParams(double a, double b, double h, int n) {
     }
 }
 
-void readData(double& a, double& b, double& h, int& n, char& isEntryToFile) {
+void readData(double& a, double& b, double& h, int& n) {
     cout << "Enter the first element of the interval 'x', a:" << endl;
     cin >> a;
     checkValidInput();
@@ -63,10 +68,31 @@ void readData(double& a, double& b, double& h, int& n, char& isEntryToFile) {
     cout << "Enter the integer index of the last element of the sum (n>=3), n:" << endl;
     cin >> n;
     checkValidInput();
+}
 
+bool isEntryToFile() {
+    char temp;
     cout << "Do you want to enter the results of the calculations into a file?\n   If yes, enter '+':" << endl;
-    cin >> isEntryToFile;
+    cin >> temp;
     checkValidInput();
+    if (temp == '+') {
+        return true;
+    }
+    return false;
+}
+
+string chooseFile() {
+    string pathToFile = R"(C:\KhPI\CppProject\FSE\LabProject\FunctionCalculator\Results\)";
+    cout << "Enter a file name or '*' to write to a standard file: \n";
+    string temp;
+    getline(cin >> ws, temp);
+    if (temp == "*") {
+        pathToFile += "valueOfXAndY.txt";
+    }
+    else {
+        pathToFile += temp + ".txt";
+    }
+    return pathToFile;
 }
 
 void entryToFile(string outputString, string pathToFile) {
@@ -78,25 +104,26 @@ void entryToFile(string outputString, string pathToFile) {
     fout.close();
 }
 
-int main(){
+int main() {
     double a, b, h, y;
     int n;
-    char isEntryToFile;
     ostringstream outputStringStream;
+    string separator = "======================================\n";
     string outputString;
-    string pathToFile = R"(C:\KhPI\CppProject\FSE\LabProject\FunctionCalculator\Results\valueOfXAndY.txt)";
+    string pathToFile;
     try {
-        readData(a, b, h, n, isEntryToFile);
+        readData(a, b, h, n);
         checkValidParams(a, b, h, n);
+        outputStringStream << separator;
         for (double x = a; x <= b; x += h) {
             y = calculateY(x, n);
-            outputStringStream << "When n = " << n << " and x" << " = " << x << ": y" << " = " << y << endl;
+            outputStringStream << "When n = " << n << " and x" << " = " << roundCustom(x) << ": y" << " = " << roundCustom(y) << endl;
         }
+        outputStringStream << separator;
         outputString = outputStringStream.str();
         cout << outputString;
-        outputStringStream << "======================================\n";
-        outputString = outputStringStream.str();
-        if (isEntryToFile == '+') {
+        if (isEntryToFile()) {
+            pathToFile = chooseFile();
             entryToFile(outputString, pathToFile);
         }
     }

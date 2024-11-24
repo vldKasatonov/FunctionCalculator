@@ -39,3 +39,20 @@ When n = 5 and x = 6: y = 5.39802
 When n = 5 and x = 7: y = 4.74221
 When n = 5 and x = 8: y = 4.23081
 ======================================
+======================================
+When n = 6 and x = -3: y = -3.85
+When n = 6 and x = -2.5: y = -3.20833
+When n = 6 and x = -2: y = -2.56667
+When n = 6 and x = -1.5: y = -1.925
+When n = 6 and x = -1: y = -1.28333
+When n = 6 and x = -0.5: y = -0.64167
+When n = 6 and x = 0: y = 0
+When n = 6 and x = 0.5: y = 51.9377
+When n = 6 and x = 1: y = 32.8
+When n = 6 and x = 1.5: y = 25.0723
+When n = 6 and x = 2: y = 20.6143
+When n = 6 and x = 2.5: y = 17.6299
+When n = 6 and x = 3: y = 15.4607
+When n = 6 and x = 3.5: y = 13.7989
+When n = 6 and x = 4: y = 12.4782
+======================================
