@@ -112,6 +112,7 @@ int main() {
     string outputString;
     string pathToFile;
     try {
+        cout << "qwe";
         readData(a, b, h, n);
         checkValidParams(a, b, h, n);
         outputStringStream << separator;
